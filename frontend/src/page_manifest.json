@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "Dashboard",
+    "Metrics",
+    "Reports",
+    "Settings"
+  ],
+  "generated_at": null,
+  "scaffolded": false
+}
