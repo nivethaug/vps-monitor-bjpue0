@@ -11,6 +11,7 @@ import {
   Bell,
   History,
   Server as ServerIcon,
+  ListTree,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -34,6 +35,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: "/metrics", label: "Metrics", icon: Gauge, testId: "navbar-link-metrics" },
   { to: "/servers", label: "Servers", icon: ServerIcon, testId: "navbar-link-servers" },
   { to: "/alerts", label: "Alerts", icon: Bell, testId: "navbar-link-alerts" },
+  { to: "/processes", label: "Processes", icon: ListTree, testId: "navbar-link-processes" },
   { to: "/activity", label: "Activity Log", icon: History, testId: "navbar-link-activity" },
   { to: "/reports", label: "Reports", icon: BarChart3, testId: "navbar-link-reports" },
   { to: "/settings", label: "Settings", icon: SettingsIcon, testId: "navbar-link-settings" },
