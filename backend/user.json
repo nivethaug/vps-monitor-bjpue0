@@ -1,0 +1,5 @@
+{
+  "email": "testuser_1767@example.com",
+  "password": "TestPass12345",
+  "notes": "Test account created during Tier 3 verification of auth integration. User id=3 in DB."
+}
