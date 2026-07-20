@@ -12,6 +12,7 @@ import {
   History,
   Server as ServerIcon,
   ListTree,
+  Network as NetworkIcon,
   Moon,
   Sun,
 } from "lucide-react";
@@ -39,6 +40,7 @@ const NAV_ITEMS: NavItem[] = [
   { to: "/servers", label: "Servers", icon: ServerIcon, testId: "navbar-link-servers" },
   { to: "/alerts", label: "Alerts", icon: Bell, testId: "navbar-link-alerts" },
   { to: "/processes", label: "Processes", icon: ListTree, testId: "navbar-link-processes" },
+  { to: "/network", label: "Network", icon: NetworkIcon, testId: "navbar-link-network" },
   { to: "/activity", label: "Activity Log", icon: History, testId: "navbar-link-activity" },
   { to: "/reports", label: "Reports", icon: BarChart3, testId: "navbar-link-reports" },
   { to: "/settings", label: "Settings", icon: SettingsIcon, testId: "navbar-link-settings" },

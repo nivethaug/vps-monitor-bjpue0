@@ -11,6 +11,7 @@ import Metrics from "./pages/Metrics";
 import Alerts from "./pages/Alerts";
 import ActivityLog from "./pages/ActivityLog";
 import Processes from "./pages/Processes";
+import Network from "./pages/Network";
 import Servers from "./pages/Servers";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
@@ -37,6 +38,7 @@ const App = () => (
                 <Route path="/alerts" element={<Alerts />} />
                 <Route path="/activity" element={<ActivityLog />} />
                 <Route path="/processes" element={<Processes />} />
+                <Route path="/network" element={<Network />} />
                 <Route path="/servers" element={<Servers />} />
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/settings" element={<Settings />} />
