@@ -8,6 +8,7 @@ import Layout from "./layout/Layout";
 import Dashboard from "./pages/Dashboard";
 import Metrics from "./pages/Metrics";
 import Alerts from "./pages/Alerts";
+import ActivityLog from "./pages/ActivityLog";
 import Servers from "./pages/Servers";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/" element={<Dashboard />} />
               <Route path="/metrics" element={<Metrics />} />
               <Route path="/alerts" element={<Alerts />} />
+              <Route path="/activity" element={<ActivityLog />} />
               <Route path="/servers" element={<Servers />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/settings" element={<Settings />} />
