@@ -304,10 +304,14 @@ function StackedArea({ series }: { series: Series[] }) {
   const pad = 28;
   const n = series[0].values.length;
   const xStep = (W - pad * 2) / (n - 1);
-  const stacked = series.reduce<number[][]>((acc, s, si) => {
-    return s.values.map((v, i) => [v, (acc[si - 1]?.[i]?.[1] ?? 0) + v]);
-  }, []);
-  const maxY = Math.max(...series.reduce<number[]>((a, s) => s.values.map((v, i) => v + (a[i] ?? 0)), [])) * 1.15;
+  // stacked[seriesIndex][dataIndex] = [value, cumulativeHigh]
+  const stacked: Array<Array<[number, number]>> = [];
+  series.forEach((s, si) => {
+    const prevHighs = si === 0 ? null : stacked[si - 1].map((p) => p[1]);
+    stacked.push(s.values.map((v, i) => [v, (prevHighs?.[i] ?? 0) + v]));
+  });
+  const totals = series[0].values.map((_, i) => series.reduce((sum, s) => sum + s.values[i], 0));
+  const maxY = Math.max(...totals) * 1.15;
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-[280px]" aria-label="Stacked area chart" role="img">
