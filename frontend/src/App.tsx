@@ -9,6 +9,8 @@ import Dashboard from "./pages/Dashboard";
 import Metrics from "./pages/Metrics";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +23,8 @@ const App = () => (
       <BrowserRouter>
         <Suspense fallback={<div className="p-6">Loading...</div>}>
           <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/metrics" element={<Metrics />} />
