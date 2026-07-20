@@ -12,6 +12,8 @@ import {
   History,
   Server as ServerIcon,
   ListTree,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +24,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { useTheme } from "@/components/ThemeProvider";
 
 type NavItem = {
   to: string;
@@ -43,6 +46,8 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { resolvedTheme, toggleTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -83,6 +88,20 @@ export default function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-10 w-10"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              data-testid="navbar-theme-toggle"
+              onClick={toggleTheme}
+            >
+              {isDark ? (
+                <Sun aria-hidden="true" className="w-4 h-4" />
+              ) : (
+                <Moon aria-hidden="true" className="w-4 h-4" />
+              )}
+            </Button>
             <Button variant="ghost" size="icon" className="hidden md:inline-flex h-10 w-10" aria-label="View notifications" data-testid="navbar-notifications-button">
               <Bell aria-hidden="true" className="w-4 h-4" />
             </Button>

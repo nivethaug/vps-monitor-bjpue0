@@ -17,6 +17,27 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@DreamPilot" />
     <meta name="twitter:image" content="https://dreampilot.dev/opengraph-image.png" />
+    <script>
+      // Anti-flash: apply saved/system theme before first paint
+      (function () {
+        try {
+          var stored = localStorage.getItem("vps-monitor-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          var root = document.documentElement;
+          if (theme === "dark") {
+            root.classList.add("dark");
+          } else {
+            root.classList.remove("dark");
+          }
+          root.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
   </head>
 
   <body>
