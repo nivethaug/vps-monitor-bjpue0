@@ -83,9 +83,8 @@ export default function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="hidden md:inline-flex h-10 w-10 relative" aria-label="View notifications">
+            <Button variant="ghost" size="icon" className="hidden md:inline-flex h-10 w-10" aria-label="View notifications" data-testid="navbar-notifications-button">
               <Bell aria-hidden="true" className="w-4 h-4" />
-              <Badge className="absolute -top-0.5 -right-0.5 h-4 min-w-4 px-1 text-[9px] flex items-center justify-center bg-rose-500 text-white border-2 border-white dark:border-slate-950">3</Badge>
             </Button>
             <div className="hidden md:flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-xs font-bold text-slate-600 dark:text-slate-200">
