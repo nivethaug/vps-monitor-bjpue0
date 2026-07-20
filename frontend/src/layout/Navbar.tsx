@@ -86,12 +86,6 @@ export default function Navbar() {
             <Button variant="ghost" size="icon" className="hidden md:inline-flex h-10 w-10" aria-label="View notifications" data-testid="navbar-notifications-button">
               <Bell aria-hidden="true" className="w-4 h-4" />
             </Button>
-            <div className="hidden md:flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-xs font-bold text-slate-600 dark:text-slate-200">
-                OE
-              </div>
-            </div>
-
             {/* Mobile menu */}
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
