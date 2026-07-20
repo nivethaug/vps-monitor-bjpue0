@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Dashboard from "./pages/Dashboard";
 import Metrics from "./pages/Metrics";
+import Alerts from "./pages/Alerts";
+import Servers from "./pages/Servers";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 import Login from "./pages/Login";
@@ -28,6 +30,8 @@ const App = () => (
             <Route element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/metrics" element={<Metrics />} />
+              <Route path="/alerts" element={<Alerts />} />
+              <Route path="/servers" element={<Servers />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<NotFound />} />

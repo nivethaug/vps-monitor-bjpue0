@@ -9,6 +9,7 @@ import {
   X,
   Activity,
   Bell,
+  Server as ServerIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -30,6 +31,8 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard, testId: "navbar-link-dashboard" },
   { to: "/metrics", label: "Metrics", icon: Gauge, testId: "navbar-link-metrics" },
+  { to: "/servers", label: "Servers", icon: ServerIcon, testId: "navbar-link-servers" },
+  { to: "/alerts", label: "Alerts", icon: Bell, testId: "navbar-link-alerts" },
   { to: "/reports", label: "Reports", icon: BarChart3, testId: "navbar-link-reports" },
   { to: "/settings", label: "Settings", icon: SettingsIcon, testId: "navbar-link-settings" },
 ];
